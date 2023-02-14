@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result,
+input {
+  background-color: #858694;
+  padding: 10px;
+  border: none;
+  color: #ffff;
+  font-size: 30px;
+  text-align: end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.buttons {
+  background-color: #e0e0e0;
+  display: block;
+}
+
+button {
+  width: 25%;
+  height: 60px;
+  font-size: 25px;
+  border: 1px solid #cbcbcb;
+}
+
+.zero {
+  width: 50%;
+}
+
+.opreator {
+  background-color: #f5913e;
+  font-size: 25px;
+}
