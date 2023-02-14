@@ -3,16 +3,16 @@
   padding: 0;
 }
 
-.container {
-  width: 60%;
+.main {
+  width: 50%;
   margin: 0 auto;
 }
 
-.result {
+.display {
   margin-top: 20px;
 }
 
-.result,
+.display,
 input {
   background-color: #858694;
   padding: 10px;
@@ -26,7 +26,7 @@ input:focus {
   outline: none;
 }
 
-.buttons {
+.numerics {
   background-color: #e0e0e0;
   display: block;
 }
@@ -42,7 +42,7 @@ button {
   width: 50%;
 }
 
-.opreator {
+.yellow {
   background-color: #f5913e;
   font-size: 25px;
 }
