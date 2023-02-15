@@ -1,41 +1,77 @@
-import React from 'react';
+import React, { PureComponent, useState } from 'react';
+import calculate from '../logic/calculate';
 
-class Calculator extends React.PureComponent {
+class Calculator extends PureComponent {
   render() {
     return (
-      <div className="main">
-        <div className="display">
-          <input type="text" value={0} />
-        </div>
-        <div className="numerics">
-          <button type="button">AC</button>
-          <button type="button">+/-</button>
-          <button type="button">%</button>
-          <button type="button" className="yellow">÷</button>
-          <br />
-
-          <button type="button">7</button>
-          <button type="button">8</button>
-          <button type="button">9</button>
-          <button type="button" className="yellow">x</button>
-          <br />
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button type="button" className="yellow">-</button>
-          <br />
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button" className="yellow">+</button>
-          <br />
-          <button type="button" className="zero"> 0 </button>
-          <button type="button">.</button>
-          <button type="button" className="yellow">=</button>
-          <br />
-        </div>
-      </div>
+      <Task />
     );
   }
 }
+const Task = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (e) => {
+    const show = () => calculate(state, e.target.name);
+    setState(show);
+  };
+
+  let display;
+  const { total, next, operation } = state;
+  if (total === null && next === null && operation === null) {
+    display = 0;
+  }
+  if (next !== null && total === null) {
+    display = next;
+  }
+
+  if (next === null && total !== null && operation !== null) {
+    display = total + operation;
+  }
+  if (next !== null && total !== null && operation !== null) {
+    display = total + operation + next;
+  }
+  if (next === null && total !== null && operation === null) {
+    display = total;
+  }
+
+  return (
+    <div className="main">
+      <div className="display">
+        <p>{display}</p>
+      </div>
+      <div className="numerics">
+        <button type="button" name="AC" onClick={handleClick}>AC</button>
+        <button type="button" name="+/-" onClick={handleClick}>+/-</button>
+        <button type="button" name="%" onClick={handleClick}>%</button>
+        <button type="button" name="÷" className="yellow" onClick={handleClick}>÷</button>
+        <br />
+
+        <button type="button" name="7" onClick={handleClick}>7</button>
+        <button type="button" name="8" onClick={handleClick}>8</button>
+        <button type="button" name="9" onClick={handleClick}>9</button>
+        <button type="button" name="x" className="yellow" onClick={handleClick}>x</button>
+        <br />
+        <button type="button" name="4" onClick={handleClick}>4</button>
+        <button type="button" name="5" onClick={handleClick}>5</button>
+        <button type="button" name="6" onClick={handleClick}>6</button>
+        <button type="button" name="-" className="yellow" onClick={handleClick}>-</button>
+        <br />
+        <button type="button" name="1" onClick={handleClick}>1</button>
+        <button type="button" name="2" onClick={handleClick}>2</button>
+        <button type="button" name="3" onClick={handleClick}>3</button>
+        <button type="button" name="+" className="yellow" onClick={handleClick}>+</button>
+        <br />
+        <button type="button" name="0" className="zero" onClick={handleClick}>0</button>
+        <button type="button" name="." onClick={handleClick}>.</button>
+        <button type="button" name="=" className="yellow" onClick={handleClick}>=</button>
+        <br />
+      </div>
+    </div>
+  );
+};
 export default Calculator;
