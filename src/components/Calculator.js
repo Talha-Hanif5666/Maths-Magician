@@ -1,14 +1,7 @@
-import React, { PureComponent, useState } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-class Calculator extends PureComponent {
-  render() {
-    return (
-      <Task />
-    );
-  }
-}
-const Task = () => {
+const Calculator = () => {
   const [state, setState] = useState({
     total: null,
     next: null,
