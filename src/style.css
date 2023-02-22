@@ -6,6 +6,11 @@
 .main {
   width: 50%;
   margin: 0 auto;
+  background-color: #ffe591;
+}
+
+body {
+  background-color: #ffe591;
 }
 
 .display {
@@ -16,6 +21,16 @@
 input {
   background-color: #858694;
   padding: 20px;
+  border: none;
+  color: #ffff;
+  font-size: 30px;
+  text-align: end;
+}
+
+.result,
+input {
+  background-color: #858694;
+  padding: 10px;
   border: none;
   color: #ffff;
   font-size: 30px;
@@ -45,4 +60,132 @@ button {
 .yellow {
   background-color: #f5913e;
   font-size: 25px;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffe591;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #814105;
+  padding: 0.5rem;
+  font-family: 'Times new romans', sans-serif;
+  color: white;
+}
+
+.h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 3.25rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  color: #6d3603;
+}
+
+.main-heading {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+
+.quotetext {
+  width: 80%;
+  margin-top: 100px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+
+.line {
+  color: white;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-right: 30px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0.25rem;
+  color: white;
+  font-style: italic;
+}
+
+.nav-item:focus {
+  color: #f1c40f;
+}
+
+.home-container {
+  width: 80vw;
+  height: 70vh;
+  margin: 2rem auto;
+  line-height: 1.5rem;
+  background-color: white;
+  box-shadow: 10px 10px 10px 10px #8f541d;
+}
+
+.home-title {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.home-desc {
+  font-size: 20px;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.qoute {
+  width: 60%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.qoute h1 {
+  font-size: 2rem;
+}
+
+.author {
+  font-size: 2.5rem;
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.buttons {
+  background-color: #e0e0e0;
+  display: block;
+}
+
+.opreator {
+  background-color: #f5913e;
+}
+
+button:hover {
+  cursor: pointer;
 }
