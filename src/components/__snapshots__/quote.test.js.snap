@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Quotes component Test component should render properly 1`] = `
+<section
+  className="qoute"
+>
+  <h1
+    className="quotetext"
+  >
+    "Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding."
+  </h1>
+  <span
+    className="author"
+  >
+    - William Paul Thurston
+  </span>
+</section>
+`;
