@@ -81,7 +81,7 @@
 
 > Add a link to your deployed project.
 
-- [Comming soon]()
+- [Live demo link](https://talhahanif-maths.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
